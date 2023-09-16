@@ -1,0 +1,76 @@
+.popup {
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    top: 120px;
+    border-radius: 10px;
+}
+
+.form {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.form .line-stand {
+    box-sizing: border-box;
+    padding: 5px 5px;
+    
+}
+
+.form .line-stand div {
+    border: 1px solid #000;
+    height: 100%;
+}
+
+.line-stand.left {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.4));
+}
+
+.line-stand.right {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.4));
+}
+
+.popup .head-form {
+    display: flex;
+    box-sizing: border-box;
+    border-radius: 5px 5px 0 0 ;
+    
+}
+
+.popup .head-form .btn-left, .popup .head-form .btn-right {
+    height: 50px;
+    font-weight: 600;
+    width: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-left {
+    border-radius: 5px 0 0 0 ;
+}
+
+.btn-right {
+    border-radius:  0 5px 0 0 ;
+}
+
+.popup .head-form .btn-left:hover {
+    cursor: pointer;
+}
+
+.popup .head-form .btn-right:hover {
+    cursor: pointer;
+}
+
+.btn-left.active {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    color: #fff;
+    border-radius: 5px 0 0 0 ;
+}
+
+.btn-right.active {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    color: #fff;
+    border-radius:  0 5px 0 0 ;
+}
