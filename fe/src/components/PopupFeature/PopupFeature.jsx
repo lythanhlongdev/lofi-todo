@@ -35,7 +35,7 @@ const PopupFeature = memo(() => {
                             Register
                         </div>
                     </div>
-                    <div>
+                    <div className={classes['body-form']}>
                         {openForm ? <PopupLogin /> : <PopupRegister />}
                     </div>
                 </div>
