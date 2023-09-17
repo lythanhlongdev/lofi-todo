@@ -6,17 +6,25 @@ import { LofiContext } from '../../context/Lofi.context'
 import PopupLogin from './PopupLogin'
 import PopupLogout from './PopupLogout'
 import PopupRegister from './PopupRegister'
+import ModalScene from '../ModalScene/ModalScene'
+import ModalNote from '../ModalNote/ModalNote'
+import ModalTodo from '../ModalTodo/ModalTodo'
+import ModalTime from '../ModalTime/ModalTime'
 
 const PopupFeature = memo(() => {
     const lofiCtx = useContext(LofiContext)
     const [openForm, setOpenForm] = useState(true)
 
     const user = localStorage.getItem("userLofiTodo")
-    // const user = "not"
 
     return (
-        <div className={classes.popup}>
-            {lofiCtx.popup === 5 && !user ?
+        < div className={`${lofiCtx.openPopup ? classes.popup : classes.hidden}`}>
+            {lofiCtx.popup === 1 && <ModalScene />}
+            {lofiCtx.popup === 2 && <ModalTodo />}
+            {lofiCtx.popup === 3 && <ModalNote />}
+            {lofiCtx.popup === 4 && <ModalTime />}
+            {
+                lofiCtx.popup === 5 && !user &&
                 <div className={classes.form}>
                     <div className={classes['head-form']}>
                         <div
@@ -39,9 +47,11 @@ const PopupFeature = memo(() => {
                         {openForm ? <PopupLogin /> : <PopupRegister />}
                     </div>
                 </div>
-                : <PopupLogout />
             }
-        </div>
+            {lofiCtx.popup === 5 && user && <PopupLogout />}
+
+
+        </div >
     )
 })
 
