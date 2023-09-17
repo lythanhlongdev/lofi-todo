@@ -13,7 +13,8 @@ const Header = () => {
     return (
         <div className={classes.header}>
             <Navbar />
-            {lofiCtx.openPopup && <PopupFeature />}
+            {/* {lofiCtx.openPopup && <PopupFeature />} */}
+            <PopupFeature />
         </div>
     )
 }
