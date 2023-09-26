@@ -7,7 +7,7 @@ import classes from '../assets/css/Home.module.css'
 
 const Home = () => {
     return (
-        <div className={classes.home}>
+        <div className={classes.home} id='home'>
             <Header />
             <Footer />
         </div>

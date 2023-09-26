@@ -13,8 +13,19 @@ export const LofiProvider = ({ children }) => {
     } else setOpenPopup(true);
   };
 
+  const sceneChangeHandler = (scene) => {
+    // Lấy phần tử DOM của trang chủ.
+    const homeElement = document.querySelector("#home");
+    console.log(homeElement);
+
+    // Thiết lập nền bằng JavaScript.
+    homeElement.style.background = scene;
+  };
+
   return (
-    <LofiContext.Provider value={{ openPopup, popupHandler, popup }}>
+    <LofiContext.Provider
+      value={{ openPopup, popupHandler, popup, sceneChangeHandler }}
+    >
       {children}
     </LofiContext.Provider>
   );

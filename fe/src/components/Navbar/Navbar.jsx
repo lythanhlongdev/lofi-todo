@@ -8,7 +8,7 @@ const Navbar = () => {
 
     return (
         <div className={classes.navbar}>
-            <div className={`${classes.image} ${classes["navbar-item"]}`}>
+            <div className={`${classes.scene} ${classes["navbar-item"]}`}>
                 <PictureOutlined
                     className={classes.icon}
                     onClick={() => {
