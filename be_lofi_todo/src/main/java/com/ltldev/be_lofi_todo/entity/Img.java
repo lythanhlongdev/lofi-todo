@@ -12,12 +12,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Img extends BaseLong {
-//
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "img_id")
-//    private Integer imgId;
+public class Img extends BaseByte {
 
     private String title;
     private String description;

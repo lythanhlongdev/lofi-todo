@@ -1,5 +1,6 @@
 package com.ltldev.be_lofi_todo.entity;
 
+import com.ltldev.be_lofi_todo.enums.Role;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -27,4 +28,8 @@ public class User extends BaseLong {
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
     private Set<Task> listTask;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "role")
+    private Role role;
 }

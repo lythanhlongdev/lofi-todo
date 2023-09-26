@@ -1,6 +1,7 @@
 package com.ltldev.be_lofi_todo.api;
 
 import com.ltldev.be_lofi_todo.dto.user.LoginDto;
+import com.ltldev.be_lofi_todo.dto.user.UserDto;
 import com.ltldev.be_lofi_todo.service.AuthenticationService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -21,4 +22,10 @@ public class UserAPI {
     public ResponseEntity<?> authenticate(@RequestBody @Valid LoginDto request) {
         return new ResponseEntity<>(service.login(request), HttpStatus.OK);
     }
+
+    @PostMapping("register")
+    public ResponseEntity<?> register(@RequestBody @Valid UserDto request) {
+        return new ResponseEntity<>(service.Register(request), HttpStatus.OK);
+    }
+
 }
