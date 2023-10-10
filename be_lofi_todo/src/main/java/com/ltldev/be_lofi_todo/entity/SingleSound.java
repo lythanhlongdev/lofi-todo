@@ -6,13 +6,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.io.Serializable;
+
 @Getter
 @Setter
 @NoArgsConstructor
 //@AllArgsConstructor
 @Entity
 @Table(name = "single_sound")
-public class SingleSound extends BaseByte{
+public class SingleSound extends BaseByte implements Serializable {
     private String title;
     private String author;
     private String description;

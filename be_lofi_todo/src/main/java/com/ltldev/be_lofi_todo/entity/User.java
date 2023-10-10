@@ -4,6 +4,7 @@ import com.ltldev.be_lofi_todo.enums.Role;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serializable;
 import java.util.Set;
 
 @Getter
@@ -13,7 +14,7 @@ import java.util.Set;
 @ToString
 @Entity
 @Table(name = "user")
-public class User extends BaseLong {
+public class User extends BaseLong implements Serializable {
     @Column(name = "user_name", length = 20)
     private String userName;
 

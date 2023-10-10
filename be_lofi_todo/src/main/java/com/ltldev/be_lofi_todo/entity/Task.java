@@ -4,6 +4,7 @@ package com.ltldev.be_lofi_todo.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serializable;
 import java.sql.Date;
 
 @Getter
@@ -13,7 +14,7 @@ import java.sql.Date;
 @ToString
 @Entity
 @Table(name = "task")
-public class Task extends BaseLong{
+public class Task extends BaseLong implements Serializable {
 
 //    @Id
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -7,13 +7,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.io.Serializable;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "lofi_music")
-public class LofiMusic extends  BaseByte{
+public class LofiMusic extends  BaseByte implements Serializable {
 
     private String title;
     private String author;
